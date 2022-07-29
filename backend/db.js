@@ -8,4 +8,6 @@ const client = new Client({
   database: "todo",
 });
 
-module.exports = client;
+module.exports = {
+  query: (text, params) => client.query(text, params),
+};
